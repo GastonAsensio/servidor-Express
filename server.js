@@ -15,6 +15,6 @@ app.get('/productos', async (request, response) => {
 
 app.get('/productoRandom', async (request,response) => {
     const allProducts = await manager.viewProducts();
-    const productoRandom = allProducts.message = [Math.floor(Math.random()*allProducts.message.length)];
+    const productoRandom = allProducts.message[Math.floor(Math.random()*allProducts.message.length)];
     response.send(productoRandom)
     })

@@ -26,7 +26,7 @@ class Manager {
         if (fs.existsSync(productFile)){
             let data = await fs.promises.readFile(productFile, 'utf-8') 
             let products = JSON.parse(data)
-            return {status:'success', message: products} 
+            return {products} 
         } else {
             return {status: 'error',} 
         }
